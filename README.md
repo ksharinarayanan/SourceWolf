@@ -18,6 +18,7 @@
 + <a href="#usage">Usage</a>
 + <a href="#workflow">How can this be integrated into your workflow?</a>
 + <a href="#todo">To do</a>
++ <a href="#update">Updating SourceWolf</a>
 + <a href="#contributions">Contributions</a>
 + <a href="#issues">Issues</a>
 + <a href="#naming">File naming conventions</a>
@@ -179,6 +180,36 @@ This core purpose explains the modular way in which the files are written.
 
 + Generate a custom wordlist for a target from the words obtained in the source.
 + Automate finding any leaked keys.
+
+</div>
+
+<div id="#update">
+
+### Updates
+
+It is possible to update SourceWolf right from the terminal, without you having to clone the repository again.
+<br>
+SourceWolf checks for updates everytime it runs, and notifies the user if there are any updates available along with a summary of it.
+<br>
+![](https://raw.githubusercontent.com/micha3lb3n/SourceWolf/master/images/update.jepg)
+
+Running
+```
+python3 sourcewolf.py --update-info
+```
+provides more details on the update
+<br>
+![](https://raw.githubusercontent.com/micha3lb3n/SourceWolf/master/images/update-info.jepg)
+
+When there are updates available, you must move the update.py file outside of the SourceWolf directory, and run
+<br>
+**Warning: This deletes all the files and folders inside your SourceWolf directory**
+```
+python3 update.py /path/to/SourceWolf
+```
+
+
+This actually removes the directory, and clones back the repo.
 
 </div>
 

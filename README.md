@@ -191,7 +191,7 @@ It is possible to update SourceWolf right from the terminal, without you having 
 <br>
 SourceWolf checks for updates everytime it runs, and notifies the user if there are any updates available along with a summary of it.
 <br>
-![](https://raw.githubusercontent.com/micha3lb3n/SourceWolf/master/images/update.jepg)
+![](https://github.com/micha3lb3n/SourceWolf/blob/master/images/update.JPG)
 
 Running
 ```
@@ -199,7 +199,7 @@ python3 sourcewolf.py --update-info
 ```
 provides more details on the update
 <br>
-![](https://raw.githubusercontent.com/micha3lb3n/SourceWolf/master/images/update-info.jepg)
+![](https://github.com/micha3lb3n/SourceWolf/blob/master/images/update-info.JPG)
 
 When there are updates available, you must move the update.py file outside of the SourceWolf directory, and run
 <br>

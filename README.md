@@ -260,3 +260,7 @@ Consider an URL ```https://example.com/api/```
 So the file finally looks like ```example.com@api.txt```
 
 </div>
+
+### License
+
+SourceWolf uses the <a href="https://github.com/micha3lb3n/SourceWolf/blob/master/LICENSE">MIT license</a>

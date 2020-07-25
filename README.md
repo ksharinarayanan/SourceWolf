@@ -85,6 +85,8 @@ All the features mentioned above execute with great speed.
 
 + #### Crawl response mode:
 
+![](https://github.com/micha3lb3n/SourceWolf/blob/master/images/crawl.JPG)
+
 Complete usage:
 ```
   python3 sourcewolf.py -l domains -o output/ -c crawl_output
@@ -110,6 +112,8 @@ https://example.com/hitme
 
 + #### Brute force mode
 
+![](https://github.com/micha3lb3n/SourceWolf/blob/master/images/brute.JPG)
+
 ```
 python3 sourcewolf.py -b https://hackerone.com/FUZZ -w /path/to/wordlist -s status
 ```
@@ -121,6 +125,8 @@ SourceWolf replace the ```FUZZ``` keyword from the ```-b``` value with the words
 ```-s``` will store the output in a file called ```status```
 
 + #### Probing mode
+
+> Screenshot not included as the output looks similar to ```crawl response``` mode.
 
 ```
 python3 sourcewolf -l domains -s live

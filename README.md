@@ -45,7 +45,7 @@ All the features mentioned above execute with great speed.
 
 ### Installation
 
-+ git clone https://github.com/micha3lb3n/SourceWolf
++ git clone https://github.com/micha3lb3n/SourceWolf (or) Download the latest <a href="https://github.com/micha3lb3n/SourceWolf/releases">release</a>!
 + cd SourceWolf/
 + pip3 install -r requirements.txt
 

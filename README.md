@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://github.com/micha3lb3n/SourceWolf/blob/master/images/logo.png">
+  <img src="https://github.com/micha3lb3n/SourceWolf/blob/master/images/logo.png" width="130px" height="130px">
   <b>SourceWolf</b>
 </p>
 

@@ -1,6 +1,6 @@
 <p align="center">
-![](https://github.com/micha3lb3n/SourceWolf/blob/master/images/logo.png)
-**SourceWolf**
+  <img src="https://github.com/micha3lb3n/SourceWolf/blob/master/images/logo.png">
+  <b>SourceWolf</b>
 </p>
 
 <p align="center">

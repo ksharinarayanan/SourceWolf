@@ -120,6 +120,8 @@ def endpointSearch(file, output_file):
                 endpoint += char
                 flag = 1
             prev = char
+
+    # removes duplicates
     endpoints = list(dict.fromkeys(endpoints))
 
     if output_file != None:

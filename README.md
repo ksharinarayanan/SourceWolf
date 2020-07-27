@@ -242,8 +242,7 @@ Currently, sourcewolf supports only finding hidden endpoints from the source, bu
 <br>
 Contributions are mainly required for integrating more modules, with sourcewolf, though feel free to open a PR even if it's a typo.
 
-> Before sending a pull request, ensure that you are on the latest version. <br>
-> **Open an issue first if you are going to add a new feature to confirm if it's required! You must not be wasting time trying to code a new feature which is not required.**
+> Before sending a pull request, ensure that you are on the latest version. <br> > **Open an issue first if you are going to add a new feature to confirm if it's required! You must not be wasting time trying to code a new feature which is not required.**
 
 </div>
 
@@ -273,6 +272,10 @@ Consider an URL `https://example.com/api/`
 So the file finally looks like `example.com@api.txt`
 
 </div>
+
+### Credits
+
+Logo designed by <a href="https://instagram.com/murugan_artworks">Murugan artworks</a>
 
 ### License
 

@@ -176,6 +176,7 @@ def banner():
 if __name__ == "__main__":
     Parser = argparse.ArgumentParser()
     Parser.add_argument('-l', '--list', help="List of javascript URLs")
+    Parser.add_argument('-u', '--url', help="Single URL")
     Parser.add_argument('-t', '--threads',
                         help="Number of concurrent threads to use (default 5)")
     Parser.add_argument('-o', '--output directory-name',
@@ -221,6 +222,7 @@ if __name__ == "__main__":
         sys.exit(0)
 
     list_of_urls = args.list
+    url = args.url
     threads = args.threads
     delay = args.delay
     status_code_file = args.status_code_file
@@ -252,7 +254,7 @@ if __name__ == "__main__":
         print(colors.RED + "Error: FUZZ keyword not found in the brute URL" + colors.RESET)
         sys.exit(2)
 
-    if list_of_urls is None and args.brute == None:
+    if list_of_urls == None and url == None and args.brute == None:
         print(
             colors.RED + "Error: Required argument --list" + colors.RESET)
         Parser.print_help()
@@ -266,10 +268,14 @@ if __name__ == "__main__":
               "' not found!" + colors.RESET)
         sys.exit(1)
 
+    urls = []
+
     try:
         # getting the list of URLs from a list
         if list_of_urls != None:
             urls = open(list_of_urls, "r")
+        elif url != None:
+            urls.append(url)
     except FileNotFoundError:
         print("File '" + list_of_urls + "' not found!")
         sys.exit(1)

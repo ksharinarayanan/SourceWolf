@@ -62,6 +62,7 @@ All the features mentioned above execute with great speed.
 > python3 sourcewolf.py -h
 
 -l LIST, --list LIST  List of javascript URLs
+-u URL, --url URL     Single URL
 -t THREADS, --threads THREADS
                       Number of concurrent threads to use (default 5)
 -o OUTPUT_DIR, --output directory-name OUTPUT_DIR
@@ -117,6 +118,18 @@ https://example.com/hitme
 `crawl_output` specified using the `-c` flag is used to store the output, inside a directory which SourceWolf produces by crawling the HTTP response files, stored inside the `output/` directory (currently only endpoints)
 
 > `crawl_output/` directory will contain an endpoint file, which contains all the endpoints collected by SourceWolf. The directory will have more files, as more modules, and features are integrated into SourceWolf.
+
+<br>
+
+<p align="center"><b>(OR)</b></p>
+
+For a single URL, <br>
+
+```
+  python3 sourcewolf.py -u example.com/api/endpoint -o output/ -c crawl_output
+```
+
+Only the flag `-l` is replaced by `-u`, everything else remains the same.
 
 <br>
 

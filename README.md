@@ -6,7 +6,7 @@
 </p>
 
 <p align="center">
-  <img src="https://img.shields.io/badge/Release-v1.0.0-brightgreen">
+  <img src="https://img.shields.io/badge/Release-v1.1.0-brightgreen">
   <img src="https://img.shields.io/github/issues-closed/micha3lb3n/SourceWolf">
   <img src="https://img.shields.io/github/issues-pr-closed/micha3lb3n/SourceWolf">
   <img src="https://img.shields.io/github/contributors/micha3lb3n/SourceWolf">

@@ -73,6 +73,7 @@ def getResponse(url, delay):
         else:
             response = session.get(url, headers=args.headers,
                                    cookies=args.cookies)
+
         if os.name == "nt" or args.no_colors == True:
             pass
         else:
@@ -151,7 +152,7 @@ def banner():
 
     print(colors.CYAN + " \
         \n\n \
-        SourceWolf v" + local_version)
+        SourceWolf v" + str(local_version))
 
     if update_available == True:
         print(colors.GREEN + colors.UNDERLINE + "\n\nUpdated version v" + latest_version +

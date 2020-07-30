@@ -125,8 +125,8 @@ def endpointSearch(file, output_file):
     endpoints = list(dict.fromkeys(endpoints))
 
     if output_file != None:
-        if os.path.isfile(output_file) == True:
-            os.remove(output_file)
+        # if os.path.isfile(output_file) == True:
+        #     os.remove(output_file)
         out = open(output_file, "a")
         for endpoint in endpoints:
             out.write(endpoint + "\n")

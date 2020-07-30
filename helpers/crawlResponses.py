@@ -9,11 +9,13 @@ import shutil
 
 # from search import endpointSearch
 if __name__ == "__main__":
-    from search import endpointSearch
+    from getEndpoints import endpointSearch
     from colors import *
+    from getVariables import variableSearch
 else:
-    from helpers.search import endpointSearch
+    from helpers.getEndpoints import endpointSearch
     from helpers.colors import *
+    from helpers.getVariables import variableSearch
 
 
 class crawlThreads(threading.Thread):
@@ -27,6 +29,21 @@ class crawlThreads(threading.Thread):
 
         try:
             endpointSearch(self.file, self.output_file)
+        finally:
+            threadLimiter.release()
+
+
+class getVarNamesThreads(threading.Thread):
+    def __init__(self, file, output_file):
+        threading.Thread.__init__(self)
+        self.file = file
+        self.output_file = output_file
+
+    def run(self):
+        threadLimiter.acquire()
+
+        try:
+            variableSearch(self.file, self.output_file)
         finally:
             threadLimiter.release()
 
@@ -46,7 +63,7 @@ def crawlOutput(output_dir, crawl_output):
             shutil.rmtree(crawl_output)
         os.mkdir(crawl_output)
 
-    temp_directory = []
+    files = []
 
     files = glob.glob(output_dir + '/**/*.txt', recursive=True)
 
@@ -68,8 +85,8 @@ def crawlOutput(output_dir, crawl_output):
         if crawl_output != None:
             endpoint_file = os.path.join(crawl_output, "endpoints")
         time.sleep(1.5)
-        print(
-            "\n[+] Starting to crawl through the response files to find hidden endpoints\n" + Colors.RESET)
+        print(Colors.YELLOW +
+              "\n[+] Starting to crawl through the response files to find hidden endpoints\n" + Colors.RESET)
         time.sleep(2)
 
         file_threads = []
@@ -83,8 +100,35 @@ def crawlOutput(output_dir, crawl_output):
         for file_thread in file_threads:
             file_thread.join()
 
+    if crawl_output == None:
+        crawl = input(
+            Colors.YELLOW + "[!] Do you want to crawl through the response files obtained to find javascript variables? [y/n]: ")
+    else:
+        crawl = 'y'
 
-threads = 100
+    if crawl.lower() == 'y':
+        file_threads = []
+
+        var_file = None
+        if crawl_output != None:
+            var_file = os.path.join(crawl_output, "jsvars")
+
+        time.sleep(1.5)
+        print(Colors.YELLOW +
+              "\n[+] Starting to crawl through the response files to find javascript variables\n" + Colors.RESET)
+        time.sleep(2)
+
+        for file in files:
+            file_threads.append(getVarNamesThreads(file, var_file))
+
+        for file_thread in file_threads:
+            file_thread.start()
+
+        for file_thread in file_threads:
+            file_thread.join()
+
+
+threads = 150
 threadLimiter = threading.BoundedSemaphore(threads)
 
 if __name__ == "__main__":

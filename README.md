@@ -6,7 +6,7 @@
 </p>
 
 <p align="center">
-  <img src="https://img.shields.io/badge/Release-v1.1.0-brightgreen">
+  <img src="https://img.shields.io/badge/Release-v1.2-brightgreen">
   <img src="https://img.shields.io/github/issues-closed/micha3lb3n/SourceWolf">
   <img src="https://img.shields.io/github/issues-pr-closed/micha3lb3n/SourceWolf">
   <img src="https://img.shields.io/github/contributors/micha3lb3n/SourceWolf">
@@ -32,6 +32,8 @@
 <h3> What can SourceWolf do?</h3>
 
 -   Crawl through responses to find hidden endpoints, either by sending requests, or from the local response files (if any).
+
+-   Create a list of javascript variables found in the source
 
 -   Brute forcing host using a wordlist.
 
@@ -117,7 +119,13 @@ https://example.com/hitme
 
 `crawl_output` specified using the `-c` flag is used to store the output, inside a directory which SourceWolf produces by crawling the HTTP response files, stored inside the `output/` directory (currently only endpoints)
 
-> `crawl_output/` directory will contain an endpoint file, which contains all the endpoints collected by SourceWolf. The directory will have more files, as more modules, and features are integrated into SourceWolf.
+The ```crawl_output/``` directory contains:
+
+endpoints - All the endpoints found
+<br>
+jsvars - All the javascript variables
+
+> The directory will have more files, as more modules, and features are integrated into SourceWolf.
 
 <br>
 

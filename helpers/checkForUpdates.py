@@ -70,6 +70,7 @@ def checkUpdates():
 
 def printResults():
     local_version, latest_version, new_features, bug_fixes, info = checkUpdates()
+    local_version, latest_version = str(local_version), str(latest_version)
     if local_version == latest_version:
         print(Colors.GREEN + "SourceWolf up to date! v" +
               local_version + Colors.RESET)

@@ -15,7 +15,7 @@ def variableSearch(file, output_file):
         # this is done to avoid redunduncy while comparing let and var
         name = code[i:i+3]
 
-        if name == "var" or name == "let" or code[i:i+5] == "const" == "let":
+        if name == "var" or name == "let" or code[i:i+5] == "const":
             if name == "var":
                 i += 3
             else:

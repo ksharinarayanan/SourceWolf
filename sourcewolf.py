@@ -155,7 +155,7 @@ def banner():
         SourceWolf v" + str(local_version))
 
     if update_available == True:
-        print(colors.GREEN + colors.UNDERLINE + "\n\nUpdated version v" + latest_version +
+        print(colors.GREEN + colors.UNDERLINE + "\n\nUpdated version v" + str(latest_version) +
               " available", end="")
         print(colors.RESET + colors.RED, end="")
         print(end=" ")

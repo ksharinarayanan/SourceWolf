@@ -230,6 +230,8 @@ if __name__ == "__main__":
     output_dir = args.output_dir
     brute_urls = args.brute
 
+    urls = []
+
     if delay:
         delay = int(delay)
     else:
@@ -268,8 +270,6 @@ if __name__ == "__main__":
         print(colors.RED + "File '" + args.wordlist +
               "' not found!" + colors.RESET)
         sys.exit(1)
-
-    urls = []
 
     try:
         # getting the list of URLs from a list
@@ -326,7 +326,7 @@ if __name__ == "__main__":
     for url in urls:
         if args.wordlist != None:
             # brute method
-            url = brute_urls.replace("FUZZ", url[:-1])
+            url = brute_urls.replace("FUZZ", url)
             url = url[:-1]
         else:
             # Adding the protocol if not specified in the list

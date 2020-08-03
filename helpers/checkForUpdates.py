@@ -93,7 +93,7 @@ def printResults():
             for fix in bug_fixes:
                 print(" - " + fix)
             print()
-        print(Colors.YELLOW + "You can update SourceWolf by placing update.py( present in the root of SourceWolf ) outside the SourceWolf directory, and use it as")
+        print(Colors.YELLOW + "You can update SourceWolf by placing update.py (present in the root of SourceWolf) outside the SourceWolf directory, and use it as")
         print("python3 update.py /path/to/SourceWolf")
         print(Colors.RESET)
 

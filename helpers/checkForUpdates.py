@@ -29,8 +29,8 @@ def checkUpdates():
     latest_version = requests.get(
         "https://raw.githubusercontent.com/micha3lb3n/SourceWolf/master/helpers/sourcewolf-version.yaml")
     if str(latest_version) != "<Response [200]>":
-        print(Colors.RED + "Error while fetching the version file!")
-        print("If you are seeing this, please open an issue on github!" + Colors.RESET)
+        print(Colors.RED + "Error while fetching the version file! SourceWolf requires an internet connection to check for updates.")
+        print("If you are connected to the internet and you are seeing this, please open an issue on github!" + Colors.RESET)
         sys.exit(1)
 
     try:

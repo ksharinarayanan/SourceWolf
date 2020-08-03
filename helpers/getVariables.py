@@ -3,7 +3,16 @@ import sys
 import os
 
 
-def variableSearch(file, output_file):
+def getEndpointFromFile(file):
+    endpoint = file.split('/')[2]
+    endpoint = endpoint[:-4]
+    endpoint = endpoint.replace("@", "/")
+    endpoint = "http://" + endpoint
+
+    return endpoint
+
+
+def variableSearch(file, output_file, verbose):
 
     code = jsbeautifier.beautify_file(file)
 
@@ -43,13 +52,21 @@ def variableSearch(file, output_file):
 
     # removes duplicates
     res = list(dict.fromkeys(res))
+    if verbose == True:
+        verbose_message = "URL " + \
+            getEndpointFromFile(file) + " contains the variables: "
+        print(verbose_message)
     for word in res:
         print(word)
 
     if output_file != None:
         out = open(output_file, "a")
+        if verbose != None:
+            out.write(verbose_message + "\n")
         for word in res:
             out.write(word + "\n")
+        out.write("\n")
+        out.close()
 
 
 if __name__ == "__main__":

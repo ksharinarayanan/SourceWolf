@@ -65,9 +65,9 @@ def getDomainFromEndpoint(endpoint):
     return "http://" + endpoint.split('/')[0] + '/'
 
 
-def endpointSearch(file, output_file):
+def endpointSearch(file, output_file, verbose):
     f = open(file, "r")
-    terminating_chars = ['"', "'", ')', '(', ';', ':', ' ', '<', '>', ',']
+    terminating_chars = ['"', '\'', ')', '(', ';', ':', ' ', '<', '>', ',']
     endpoints = []
 
     # endpoints.append(getAttributeValues(file))

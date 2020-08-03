@@ -7,48 +7,67 @@ import argparse
 import time
 import shutil
 
-# from search import endpointSearch
 if __name__ == "__main__":
     from getEndpoints import endpointSearch
     from colors import *
     from getVariables import variableSearch
+    from extractSocialmedia import extract
 else:
     from helpers.getEndpoints import endpointSearch
     from helpers.colors import *
     from helpers.getVariables import variableSearch
+    from helpers.extractSocialmedia import extract
 
 
 class crawlThreads(threading.Thread):
-    def __init__(self, file, output_file):
+    def __init__(self, file, output_file, verbose):
         threading.Thread.__init__(self)
         self.file = file
         self.output_file = output_file
+        self.verbose = verbose
 
     def run(self):
         threadLimiter.acquire()
 
         try:
-            endpointSearch(self.file, self.output_file)
+            endpointSearch(self.file, self.output_file, self.verbose)
         finally:
             threadLimiter.release()
 
 
 class getVarNamesThreads(threading.Thread):
-    def __init__(self, file, output_file):
+    def __init__(self, file, output_file, verbose):
         threading.Thread.__init__(self)
         self.file = file
         self.output_file = output_file
+        self.verbose = verbose
 
     def run(self):
         threadLimiter.acquire()
 
         try:
-            variableSearch(self.file, self.output_file)
+            variableSearch(self.file, self.output_file, self.verbose)
         finally:
             threadLimiter.release()
 
 
-def crawlOutput(output_dir, crawl_output):
+class getSocialMediaThreads(threading.Thread):
+    def __init__(self, file, output_file, verbose):
+        threading.Thread.__init__(self)
+        self.file = file
+        self.output_file = output_file
+        self.verbose = verbose
+
+    def run(self):
+        threadLimiter.acquire()
+
+        try:
+            extract(self.file, self.output_file, self.verbose)
+        finally:
+            threadLimiter.release()
+
+
+def crawlOutput(output_dir, crawl_output, verbose):
 
     if os.path.isdir(output_dir) == False:
         print(Colors.RED + "'" + output_dir + "' directory does not exist!")
@@ -92,7 +111,7 @@ def crawlOutput(output_dir, crawl_output):
         file_threads = []
 
         for file in files:
-            file_threads.append(crawlThreads(file, endpoint_file))
+            file_threads.append(crawlThreads(file, endpoint_file, verbose))
 
         for file_thread in file_threads:
             file_thread.start()
@@ -119,7 +138,34 @@ def crawlOutput(output_dir, crawl_output):
         time.sleep(2)
 
         for file in files:
-            file_threads.append(getVarNamesThreads(file, var_file))
+            file_threads.append(getVarNamesThreads(file, var_file, verbose))
+
+        for file_thread in file_threads:
+            file_thread.start()
+
+        for file_thread in file_threads:
+            file_thread.join()
+
+    if crawl_output == None:
+        crawl = input(
+            Colors.YELLOW + "[!] Do you want to crawl through the response files obtained to extract social media links? [y/n]: ")
+
+    if crawl.lower() == 'y':
+        file_threads = []
+
+        social_media_file = None
+        if crawl_output != None:
+            social_media_file = os.path.join(
+                crawl_output, "social-media")
+
+        time.sleep(1.5)
+        print(Colors.YELLOW +
+              "\n[+] Starting to crawl through the response files to extract social media\n" + Colors.RESET)
+        time.sleep(2)
+
+        for file in files:
+            file_threads.append(getSocialMediaThreads(
+                file, social_media_file, verbose))
 
         for file_thread in file_threads:
             file_thread.start()

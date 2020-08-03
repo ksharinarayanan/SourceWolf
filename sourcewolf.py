@@ -219,7 +219,7 @@ if __name__ == "__main__":
         sys.exit(0)
 
     if args.local != None:
-        crawlOutput(args.local, args.crawl_output)
+        crawlOutput(args.local, args.crawl_output, args.verbose)
         sys.exit(0)
 
     list_of_urls = args.list
@@ -229,6 +229,7 @@ if __name__ == "__main__":
     status_code_file = args.status_code_file
     output_dir = args.output_dir
     brute_urls = args.brute
+    verbose = args.verbose
 
     urls = []
 
@@ -361,4 +362,4 @@ if __name__ == "__main__":
     if output_dir != None:
         removeEmptyDirectories(output_dir)
 
-        crawlOutput(output_dir, args.crawl_output)
+        crawlOutput(output_dir, args.crawl_output, args.verbose)

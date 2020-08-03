@@ -6,7 +6,7 @@
 </p>
 
 <p align="center">
-  <img src="https://img.shields.io/badge/Release-v1.2-brightgreen">
+  <img src="https://img.shields.io/badge/Release-v1.5-brightgreen">
   <img src="https://img.shields.io/github/issues-closed/micha3lb3n/SourceWolf">
   <img src="https://img.shields.io/github/issues-pr-closed/micha3lb3n/SourceWolf">
   <img src="https://img.shields.io/github/contributors/micha3lb3n/SourceWolf">
@@ -34,6 +34,8 @@
 -   Crawl through responses to find hidden endpoints, either by sending requests, or from the local response files (if any).
 
 -   Create a list of javascript variables found in the source
+
+-   Extract all the social media links from the websites to identify potentially broken links
 
 -   Brute forcing host using a wordlist.
 

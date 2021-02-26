@@ -57,3 +57,6 @@ def extract(file, output_file, verbose):
     check(file, "twitter.com", output_file, verbose)
     check(file, "instagram.com", output_file, verbose)
     check(file, "facebook.com", output_file, verbose)
+    check(file, "linkedin.com/in", output_file, verbose)
+    check(file, "linkedin.com/company", output_file, verbose)
+    check(file, "github.com", output_file, verbose)

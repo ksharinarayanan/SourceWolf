@@ -52,6 +52,9 @@ def variableSearch(file, output_file, verbose):
 
     # removes duplicates
     res = list(dict.fromkeys(res))
+    
+    verbose_message = ""
+
     if verbose == True and res != []:
         verbose_message = "URL " + \
             getEndpointFromFile(file) + " contains the variables: "

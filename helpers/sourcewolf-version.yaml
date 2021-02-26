@@ -1,4 +1,3 @@
-version: 1.5
-new-features:
-    - "Extracts all the social media links from the input URLs, which can be potential sources for broken link hijacking"
-    - "Using the verbose mode also prints the name of the file which contains the javascript variables"
+version: 1.6
+bug-fixes:
+    - "Fixed a bug which occured while extracting the javascript variables"

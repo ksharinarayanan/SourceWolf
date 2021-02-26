@@ -97,6 +97,3 @@ def printResults():
         print("python3 update.py /path/to/SourceWolf")
         print(Colors.RESET)
 
-
-if __name__ == "__main__":
-    update()

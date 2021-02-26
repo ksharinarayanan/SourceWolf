@@ -1,3 +1,3 @@
-version: 1.6
-bug-fixes:
-    - "Fixed a bug which occured while extracting the javascript variables"
+version: 1.7
+new-features:
+    - "SourceWolf now sends requests using the firefox's user agent to emulate browsers behaviour!🔥"

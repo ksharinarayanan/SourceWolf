@@ -66,12 +66,19 @@ def getResponse(url, delay):
 
     if url[-1] == '\n' or url[-1] == ' ':
         url = url[:-1]
+    
+    headers = {}
+    if args.headers is None:
+        headers = {'User-Agent': 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:85.0) Gecko/20100101 Firefox/85.0'}
+    else:
+        headers = args.headers
+
     try:
         if args.timeout != None:
-            response = session.get(url, headers=args.headers,
+            response = session.get(url, headers=headers,
                                    cookies=args.cookies, timeout=(float(args.timeout), 30))
         else:
-            response = session.get(url, headers=args.headers,
+            response = session.get(url, headers=headers,
                                    cookies=args.cookies)
 
         if os.name == "nt" or args.no_colors == True:

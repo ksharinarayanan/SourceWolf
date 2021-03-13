@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://github.com/micha3lb3n/SourceWolf/blob/master/images/logo.png" width="130px" height="130px">
+  <img src="https://github.com/ksharinarayanan/SourceWolf/blob/master/images/logo.png" width="130px" height="130px">
   <br>
   <br>
   <h1 align="center">SourceWolf</h1>
@@ -7,9 +7,9 @@
 
 <p align="center">
   <img src="https://img.shields.io/badge/Release-v1.7-brightgreen">
-  <img src="https://img.shields.io/github/issues-closed/micha3lb3n/SourceWolf">
-  <img src="https://img.shields.io/github/issues-pr-closed/micha3lb3n/SourceWolf">
-  <img src="https://img.shields.io/github/contributors/micha3lb3n/SourceWolf">
+  <img src="https://img.shields.io/github/issues-closed/ksharinarayanan/SourceWolf">
+  <img src="https://img.shields.io/github/issues-pr-closed/ksharinarayanan/SourceWolf">
+  <img src="https://img.shields.io/github/contributors/ksharinarayanan/SourceWolf">
 </p>
 
 ​
@@ -54,7 +54,7 @@ All the features mentioned above execute with great speed.
 
 ### Installation
 
--   git clone https://github.com/micha3lb3n/SourceWolf (or) Download the latest <a href="https://github.com/micha3lb3n/SourceWolf/releases">release</a>!
+-   git clone https://github.com/ksharinarayanan/SourceWolf (or) Download the latest <a href="https://github.com/ksharinarayanan/SourceWolf/releases">release</a>!
 -   cd SourceWolf/
 -   pip3 install -r requirements.txt
 
@@ -95,7 +95,7 @@ All the features mentioned above execute with great speed.
 
 -   #### Crawl response mode:
 
-![](https://github.com/micha3lb3n/SourceWolf/blob/master/images/crawl.JPG)
+![](https://github.com/ksharinarayanan/SourceWolf/blob/master/images/crawl.JPG)
 
 Complete usage:
 
@@ -145,7 +145,7 @@ Only the flag `-l` is replaced by `-u`, everything else remains the same.
 
 -   #### Brute force mode
 
-![](https://github.com/micha3lb3n/SourceWolf/blob/master/images/brute.JPG)
+![](https://github.com/ksharinarayanan/SourceWolf/blob/master/images/brute.JPG)
 
 ```
 python3 sourcewolf.py -b https://hackerone.com/FUZZ -w /path/to/wordlist -s status
@@ -231,7 +231,7 @@ It is possible to update SourceWolf right from the terminal, without you having 
 <br>
 SourceWolf checks for updates everytime it runs, and notifies the user if there are any updates available along with a summary of it.
 <br>
-![](https://github.com/micha3lb3n/SourceWolf/blob/master/images/update.JPG)
+![](https://github.com/ksharinarayanan/SourceWolf/blob/master/images/update.JPG)
 
 Running
 
@@ -241,7 +241,7 @@ python3 sourcewolf.py --update-info
 
 provides more details on the update
 <br>
-![](https://github.com/micha3lb3n/SourceWolf/blob/master/images/update-info.JPG)
+![](https://github.com/ksharinarayanan/SourceWolf/blob/master/images/update-info.JPG)
 
 When there are updates available, you must move the update.py file outside of the SourceWolf directory, and run
 <br>
@@ -275,7 +275,7 @@ Contributions are mainly required for integrating more modules, with sourcewolf,
 
 ### Issues
 
-Feel free to [open](https://github.com/micha3lb3n/SourceWolf/issues/new) any issues you face. <br>
+Feel free to [open](https://github.com/ksharinarayanan/SourceWolf/issues/new) any issues you face. <br>
 Ensure that you include your operating system, command which was run, and screenshots if possible while opening an issue, which makes it easier for me to reproduce the issue.
 <br>
 You can also request new features, or enhance existing features by opening an issue.
@@ -304,4 +304,4 @@ Logo designed by <a href="https://instagram.com/murugan_artworks">Murugan artwor
 
 ### License
 
-SourceWolf uses the <a href="https://github.com/micha3lb3n/SourceWolf/blob/master/LICENSE">MIT license</a>
+SourceWolf uses the <a href="https://github.com/ksharinarayanan/SourceWolf/blob/master/LICENSE">MIT license</a>

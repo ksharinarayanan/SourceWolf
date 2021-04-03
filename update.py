@@ -13,6 +13,6 @@ if update.lower() == 'y':
         print("\nError: Move this update.py file outside the SourceWolf directory, and run it as")
         print("python3 update.py /path/to/SourceWolf/\n")
         sys.exit(2)
-    os.system("git clone https://github.com/micha3lb3n/SourceWolf --quiet")
+    os.system("git clone https://github.com/ksharinarayanan/SourceWolf --quiet")
     print("\n\nSuccessfully clone into SourceWolf.")
     print("You are on the latest version now!\n")

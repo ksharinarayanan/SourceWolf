@@ -16,6 +16,15 @@
 
 **Tested environments:** Windows, MAC, linux, and windows subsystem for linux (WSL)
 
+## Sponsors
+
+Support this project by <a href="mailto:ksharinarayanan36@gmail.com">becoming</a> a sponsor. Checkout these awesome sponsors:
+
+<a href="https://oxylabs.io/?utm_source=ksharinarayanan&utm_medium=cpc&utm_campaign=ksharinarayanan_github_partner&adgroupid=20220303">
+<img src="https://raw.githubusercontent.com/ksharinarayanan/ksharinarayanan/master/assets/Oxylabs%20Logo%20Dark%20background.png" width="400" height="150" />
+</a>
+
+
 ## Sections
 
 -   <a href="#features">Features</a>

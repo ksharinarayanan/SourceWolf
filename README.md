@@ -21,7 +21,7 @@
 Support this project by <a href="mailto:ksharinarayanan36@gmail.com">becoming</a> a sponsor. Checkout these awesome sponsors:
 
 <a href="https://oxylabs.go2cloud.org/aff_c?offer_id=7&aff_id=997&url_id=120">
-<img src="https://raw.githubusercontent.com/ksharinarayanan/SourceWolf/master/images/oxylabs.jpeg" width="400" height="150" />
+<img src="https://raw.githubusercontent.com/ksharinarayanan/SourceWolf/master/images/oxylabs.jpeg" width="400" height="200" />
 </a>
 
 

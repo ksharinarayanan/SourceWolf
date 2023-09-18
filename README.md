@@ -20,6 +20,8 @@
 
 Support this project by <a href="mailto:ksharinarayanan36@gmail.com">becoming</a> a sponsor. Checkout these awesome sponsors:
 
+Oxylabs provides premium proxies with 100M+ IPs across 195 countries and ready-to-use Scraper APIs. You can use this unique promo code **boost35** to get 35% off Residential, Mobile proxies, Web Unblocker, and Scraper APIs.
+
 <a href="https://oxylabs.go2cloud.org/aff_c?offer_id=7&aff_id=997&url_id=120">
 <img src="https://raw.githubusercontent.com/ksharinarayanan/SourceWolf/master/images/oxylabs.jpeg" width="400" height="200" />
 </a>
